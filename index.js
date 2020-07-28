@@ -6,5 +6,12 @@ window.addEventListener("load", () => {
 
     today = dd + '/' + mm + '/' + yyyy;
     const dateTime = document.getElementById("dateTime")
-    dateTime.textContent = today + " LOG ENTRY :"
+    dateTime.textContent = today
+    // dateTime.style.textDecoration = "underline"
 })
+
+var form = document.getElementById("entryForm");
+function handleForm(event) { 
+    event.preventDefault(); 
+} 
+form.addEventListener('submit', handleForm);

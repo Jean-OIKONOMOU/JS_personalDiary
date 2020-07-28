@@ -17,6 +17,7 @@
     --clr-dark: #1d1c19;
     --clr-darker: #0e0d0c;
     --clr-accent: #15b69b;
+    --clr-teal: #40798C;
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
@@ -25,9 +26,16 @@
 }
 
 :focus {
-    outline: 2px solid var(--clr-accent);
-    outline-offset: 1px;
-    transition: all 100ms ease-in-out;
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 2px;
+    transition: all 50ms ease-in-out;
+}
+
+body {
+    margin: 4%;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    background-color: var(--clr-teal);
+    color: var(--clr-light)
 }
 
 /* input:focus,
@@ -37,21 +45,61 @@ button:focus {
     outline: none;
 } */
 
+#dateTime {
+    text-align : left;
+    font-size: var(--fs-h3);
+}
+
 textarea {
     resize: none;
     border-radius: 8px;
-    margin-top: 15px;
+    margin: 15px;
     padding: 10px 15px;
-    
+    width: 100%;
+    height: 20vh;
+    border: unset;
+    background-color: var(--clr-light);
 }
 
 form {
+    
+    /* justify-content: center; */
+    margin: 0 auto;
+    padding: 3% 10%;
+}
+
+.entryContainer {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    padding: 10%;
+    align-items: center;
 }
 
 h1 {
     text-align: center;
+}
+
+.btn-gradient {
+	margin: 5px;
+}
+
+.btn-gradient.red:active 	  {background: var(--clr-accent);}
+.btn-gradient.red{ 
+	/* background: rgba(250,90,90,1); */
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(250,90,90,1)), to(rgba(232,81,81,1)));
+	background: -webkit-linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+	background: -moz-linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+	background: -o-linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+	background: linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa5a5a', endColorstr='#e85151', GradientType=0 );
+}
+.btn-gradient {
+	text-decoration: none;
+	color: white;
+	padding: 10px 30px;
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom: 4px solid rgba(0,0,0,0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
 }
