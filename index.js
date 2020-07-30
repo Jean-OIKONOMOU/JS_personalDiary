@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
     today = dd + '/' + mm + '/' + yyyy;
     const dateTime = document.getElementById("dateTime")
     dateTime.textContent = today
-    // dateTime.style.textDecoration = "underline"
+    dateTime.style.marginBottom = "55px"
 })
 
 var form = document.getElementById("entryForm");
