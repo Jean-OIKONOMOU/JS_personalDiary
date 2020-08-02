@@ -11,11 +11,15 @@
     <h1>My Personal Diary</h1>
 
     <form id="entryForm">
-        <label id="dateTime" for="diaryEntry"></label>
-        <div class="entryContainer">
+        <div class="formHeader">
+            <label id="dateTime" for="diaryEntry"></label>
+            <button class="btn-gradient red" id="btnBottom">Go to bottom !</button>
+        </div>
+        
+        <div class="formBody">
             <div class="formBox diaryList">
                 <h2>DIARY :</h2>
-                <textarea class="entry-textbox" id="entryForm" name="diaryEntry" placeholder="What are your plans for today ?"></textarea>
+                <textarea class="entry-textbox" id="diaryForm" name="diaryEntry" placeholder="What are your plans for today ?"></textarea>
             </div>
             
             <div class="formBox workList">
@@ -30,9 +34,9 @@
                 <h2>TUTORIALS :</h2>
                 <textarea class="entry-textbox" id="tutorialForm" name="tutorialEntry" placeholder="What tutorials do you need to make in order to remember how to do some things you did today ?"></textarea>
             </div>
-            <div class="formBox doneList">
+            <section id="entries" class="formBox doneList">
                 <h2>DONE :</h2>
-                <p>in here I need to cratea a button that creates a Radial with an input next to it for people to write what they consider "done"</p>
+                <!-- <p>in here I need to cratea a button that creates a Radial with an input next to it for people to write what they consider "done"</p>
                 <div>
                     <input type="checkbox" id="objective1" name="objective1" checked>
                     <label for="objective1">First Objective</label>
@@ -40,9 +44,10 @@
                 <div>
                     <input type="checkbox" id="objective2" name="objective2" checked>
                     <label for="objective2">Second Objective</label>
-                </div>
-            </div>
+                </div> -->
+            </section>
             <button class="btn-gradient red" type="submit">Submit</button>
+            <button class="btn-gradient red" id="btnTop">Back to top !</button>
         </div> 
     </form>
     

@@ -31,6 +31,10 @@
     transition: all 50ms ease-in-out;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Gill Sans', 'Gill Sans MT';
     background-color: var(--clr-teal);
@@ -49,8 +53,13 @@ button:focus {
 #dateTime {
     text-align : center;
     font-size: var(--fs-h2);
-    margin-bottom: 15px;
     display: block;
+}
+
+#btnBottom {
+    margin: 0 auto;
+    text-align: center;
+
 }
 
 textarea {
@@ -70,9 +79,14 @@ form {
     padding: 1% 10%;
 }
 
+.formHeader {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
 
-
-.entryContainer {
+.formBody {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +115,7 @@ h1 {
     color: var(--clr-darker);
 }
 .btn-gradient.red{ 
-    margin-top: 40px;
+    /*margin-top: 40px;*/
     cursor : pointer;
 	background: rgba(151, 0, 0,1);
 	background: -webkit-gradient(linear, left top, left bottom, from(rgb(151, 0, 0)), to(rgb(151, 9, 9)));
